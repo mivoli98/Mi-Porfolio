@@ -12,15 +12,21 @@ const About = () => {
 
     client.fetch(query)
     .then((data) => setAbouts(data))
+
+    // console.log("about: ", data)
   }, [])
+
+   
   return (
     <>
       <h2 className="head-text"> I Know that <span> Good Development </span> <br /> means <span>Good Business</span>
 
       </h2>
-
+      
       <div className="app__profiles">
+       {console.log("about: ", abouts)}
         {abouts.map((about, index) => (
+          // console.log("about: ", about)
           <motion.div
             whileInView={{ opacity: 1 }}
             whileHover={{ scale: 1.1 }}
